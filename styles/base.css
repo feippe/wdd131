@@ -95,7 +95,7 @@ main {
     border-radius: var(--space-small);
 }
 
-.card>h1 {
+.card>h2 {
     width: calc(100% - var(--space-big));
     padding: var(--space-small) var(--space-normal);
     text-align: center;
@@ -103,6 +103,9 @@ main {
     color: var(--color-white);
     border-top-left-radius: var(--space-small);
     border-top-right-radius: var(--space-small);
+    font-family: var(--font-style-title);
+    font-size: var(--font-size-title);
+    margin: 0;
 }
 
 .card .small-title {
@@ -133,7 +136,7 @@ main {
     grid-template-rows: 42px auto;
 }
 
-.card#aboutMe>h1 {
+.card#aboutMe>h2 {
     grid-column: span 2;
 }
 
