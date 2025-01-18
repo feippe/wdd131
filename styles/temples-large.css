@@ -1,0 +1,44 @@
+@media (min-width:1080px) {
+    header {
+        grid-template-columns: auto auto;
+    }
+
+    nav {
+        background-color: var(--color-main);
+        flex-direction: row-reverse;
+    }
+
+    nav>svg {
+        display: none;
+    }
+
+    nav>ul {
+        position: static;
+        width: auto;
+        background-color: var(--color-main);
+    }
+
+    nav>ul>li {
+        display: inline-block;
+        height: 100%;
+    }
+
+    nav>ul>li>a {
+        height: var(--space-big);
+        line-height: var(--space-big);
+    }
+
+    nav>ul>li>a:hover {
+        border-bottom: solid 2px var(--color-button-hover);
+    }
+
+    nav>ul>li>a.selected {
+        border-bottom: solid 2px var(--color-button-active);
+    }
+
+    #templesList figure:hover {
+        -webkit-box-shadow: 0px 0px 16px 1px var(--color-tertiary);
+        -moz-box-shadow: 0px 0px 16px 1px var(--color-tertiary);
+        box-shadow: 0px 0px 16px 1px var(--color-tertiary);
+    }
+}
