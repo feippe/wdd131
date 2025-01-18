@@ -5,6 +5,6 @@ function qsa(selector, parent = document) {
     return parent.querySelectorAll(selector);
 }
 async function getTemplateFromFile(file) {
-    const path = `/partials/${file}.html`;
+    const path = `partials/${file}.html`;
     return await fetch(path).then((data) => data.text());
 }
