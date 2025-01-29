@@ -1,0 +1,63 @@
+@media only screen and (min-width: 900px) {
+
+    header {
+        border-bottom-right-radius: var(--space-small);
+        border-bottom-left-radius: var(--space-small);
+    }
+
+    footer {
+        border-top-right-radius: var(--space-small);
+        border-top-left-radius: var(--space-small);
+        margin-top: 0;
+    }
+
+    main #data {
+        position: absolute;
+        background-color: var(--color-white-rgba);
+        top: 160px;
+        width: 300px;
+        margin-left: var(--space-normal);
+        border-radius: 8px;
+    }
+
+    main #data h2 {
+        background-color: var(--color-font-title);
+        color: var(--color-white);
+        margin-left: -8px;
+        margin-top: 8px;
+        width: 100%;
+        padding: 16px 0;
+        border-radius: 8px;
+    }
+
+    main #weather {
+        position: absolute;
+        background-color: var(--color-white-rgba);
+        top: 360px;
+        margin-left: calc(640px - var(--space-normal));
+        width: 260px;
+        margin-right: var(--space-normal);
+        border-radius: 8px;
+    }
+
+    main #weather h2 {
+        background-color: var(--color-font-title);
+        color: var(--color-white);
+        margin-left: -8px;
+        margin-top: 8px;
+        width: 100%;
+        padding: 16px 0;
+        border-radius: 8px;
+    }
+
+    main picture>img {
+        margin-bottom: -4px;
+    }
+
+    main #contentWeather>div:first-child>img {
+        width: 50px;
+        margin: 0 auto;
+        position: absolute;
+        margin-top: -64px;
+    }
+}

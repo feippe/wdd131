@@ -1,0 +1,129 @@
+:root {
+    --font-style-body: Roboto;
+    --font-style-title: "Exo 2";
+
+    --font-size-small: 12px;
+    --font-size-body: 14px;
+    --font-size-title: 22px;
+    --font-size-small-title: 18px;
+
+    --color-font-body: #151515;
+    --color-font-title: #122d5b;
+
+    --color-main: #3133ab;
+    --color-secondary: #23051e;
+    --color-tertiary: #43143b;
+
+    --color-button-active: #57dd45;
+    --color-button-pressed: #58a52f;
+    --color-button-disabled: #c3c3c3;
+    --color-button-hover: #58a52f;
+
+    --color-links-active: #134584;
+    --color-links-hover: #161c67;
+
+    --color-text-note: #4d4d4d;
+
+    --color-white: #FFF;
+    --color-highlight: #fcffb0;
+    --color-white-rgba: rgba(255, 255, 255, 0.8);
+    --color-black: #000;
+
+    --max-width: 1200px;
+
+    --space-big: 32px;
+    --space-normal: 16px;
+    --space-small: 8px;
+    --space-tiny: 4px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-style-body);
+    font-size: var(--font-size-body);
+    color: var(--color-font-body);
+}
+
+h1,
+h2 {
+    font-family: var(--font-style-title);
+    font-size: var(--font-size-title);
+    color: var(--color-font-title);
+    margin: 0;
+    text-align: center;
+}
+
+header,
+main,
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--color-main);
+    padding: var(--space-normal);
+}
+
+header h1 {
+    color: var(--color-white);
+}
+
+main picture>img {
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--space-big);
+}
+
+main #contentData,
+main #contentWeather {
+    text-align: left;
+    margin-bottom: var(--space-big);
+}
+
+main #contentData>div,
+main #contentWeather>div {
+    display: grid;
+    grid-template-columns: calc(50% - var(--space-tiny)) calc(50% - var(--space-tiny));
+    gap: var(--space-small);
+    margin-top: var(--space-small);
+}
+
+main #contentData>div>span:first-child,
+main #contentWeather>div>span:first-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+main #contentWeather>div:first-child {
+    text-align: center;
+    grid-template-columns: 1fr;
+}
+
+main #contentWeather>div:first-child>img {
+    width: 80px;
+    margin: 0 auto;
+}
+
+footer {
+    padding: var(--space-normal);
+    margin-top: var(--space-big);
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    text-align: center;
+}
+
+footer>div:first-child {
+    margin-bottom: var(--space-small);
+}
+
+footer>div>span {
+    border-left: solid 1px var(--color-highlight);
+    padding-left: var(--space-small);
+    margin-right: var(--space-small);
+}
+
+footer>div>span:first-child {
+    border: none;
+}
