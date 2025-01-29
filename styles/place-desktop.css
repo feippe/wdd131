@@ -55,9 +55,21 @@
     }
 
     main #contentWeather>div:first-child>img {
-        width: 50px;
+        /*width: 50px;
         margin: 0 auto;
         position: absolute;
-        margin-top: -64px;
+        margin-top: -64px;*/
+        display: none;
+    }
+
+    #weather h2:after {
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-image: url("../images/1530391_weather_clouds_sun_sunny_icon.svg");
+        position: absolute;
+        display: inline-block;
+        background-size: cover;
+        top: 12px;
     }
 }
