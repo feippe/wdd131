@@ -137,20 +137,26 @@ function getCardTemplate(temple) {
 }
 
 function filtering(type) {
+    qs("nav > ul > li > a.selected").classList.remove("selected");
     switch (type) {
         case "old":
             showTemples(temples.filter((e) => parseInt(e.dedicated.substring(0, 4)) < 1900));
+            qs("#menuOld").classList.add("selected");
             break;
         case "new":
             showTemples(temples.filter((e) => parseInt(e.dedicated.substring(0, 4)) >= 2000));
+            qs("#menuNew").classList.add("selected");
             break;
         case "small":
             showTemples(temples.filter((e) => e.area < 10000));
+            qs("#menuSmall").classList.add("selected");
             break;
         case "large":
             showTemples(temples.filter((e) => e.area >= 90000));
+            qs("#menuLarge").classList.add("selected");
             break;
         default:
+            qs("#menuHome").classList.add("selected");
             break;
     }
 }
