@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Roboto;
+    src: url(/project/fonts/Roboto/static/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(/project/fonts/Roboto/static/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(/project/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(/project/fonts/Ubuntu/Ubuntu-Bold.ttf);
+    font-weight: bold;
+}
+
+:root {
+    --font-title: Ubuntu;
+    --font-body: Roboto;
+}
