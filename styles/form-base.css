@@ -1,0 +1,180 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../project/fonts/Roboto/static/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../project/fonts/Roboto/static/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../project/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../project/fonts/Ubuntu/Ubuntu-Bold.ttf);
+    font-weight: bold;
+}
+
+:root {
+    --font-title: Ubuntu;
+    --font-body: Roboto;
+
+    --color-primary: #252454;
+    --color-secondary: #21573d;
+
+    --color-dark: #232323;
+    --color-gray: #444;
+    --color-gray-light: #EEE;
+    --color-light: #F4F1DE;
+    --color-highlight: #687cc5;
+    --color-white: #FFFFFF;
+    --color-error: #87341d;
+
+    --tiny-size: 4px;
+    --small-size: 8px;
+    --normal-size: 16px;
+    --big-size: 32px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--normal-size) var(--big-size);
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: var(--normal-size) var(--big-size);
+}
+
+main>form {
+    margin-bottom: var(--big-size);
+    margin-top: var(--small-size);
+}
+
+main>form>label {
+    display: block;
+    margin-bottom: var(--small-size);
+    color: var(--color-secondary);
+}
+
+main>form>div {
+    margin-bottom: var(--big-size);
+}
+
+main>form>div>label,
+main>form>label {
+    display: block;
+}
+
+main>form>label>span {
+    color: var(--color-error);
+    font-size: 12px;
+}
+
+main>form select {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    background: none;
+    border: solid 1px var(--color-secondary);
+    border-radius: var(--big-size);
+    padding: var(--small-size) var(--normal-size);
+    font-size: 16px;
+}
+
+main>form input[type="date"] {
+    display: inline-block;
+    width: calc(100% - var(--big-size) - 2px);
+    border: none;
+    background: none;
+    border: solid 1px var(--color-secondary);
+    border-radius: var(--big-size);
+    padding: var(--small-size) var(--normal-size);
+    font-size: 16px;
+}
+
+main>form input[type="text"] {
+    display: inline-block;
+    width: calc(100% - var(--big-size) - 2px);
+    border: none;
+    background: none;
+    border: solid 1px var(--color-secondary);
+    border-radius: var(--big-size);
+    padding: var(--small-size) var(--normal-size);
+    font-size: 16px;
+}
+
+main>form textarea {
+    display: inline-block;
+    width: calc(100% - var(--big-size) - 2px);
+    border: none;
+    background: none;
+    border: solid 1px var(--color-secondary);
+    border-radius: var(--normal-size);
+    padding: var(--small-size) var(--normal-size);
+    font-size: 16px;
+    height: 120px;
+}
+
+main>form input[type="submit"] {
+    width: 100%;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--normal-size) var(--normal-size);
+    border-radius: var(--big-size);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main>form .divChkFeature-ch {
+    margin-bottom: var(--small-size);
+    color: var(--color-gray);
+}
+
+main>form .rdoOverallRating input,
+main>form .rdoOverallRating label,
+main>form .chkFeatures input,
+main>form .chkFeatures label {
+    cursor: pointer;
+}
+
+footer {
+    padding: var(--normal-size) var(--big-size);
+    background-color: var(--color-dark);
+    color: var(--color-white);
+
+}
+
+footer>p:nth-child(1) {
+    padding: var(--normal-size) var(--big-size) 0 var(--big-size);
+}
+
+footer>p:nth-child(2) {
+    padding: 0 var(--big-size) var(--normal-size) var(--big-size);
+}
+
+footer>p>span {
+    border-left: solid 1px var(--color-highlight);
+    padding-left: var(--small-size);
+    padding-right: var(--tiny-size);
+}
+
+footer>p>span:first-child {
+    border: none;
+    padding-left: 0;
+}

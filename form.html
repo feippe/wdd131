@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+
+    <link rel="stylesheet" href="styles/form-base.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <label for="sltProduct">Product Name</label>
+            <div>
+                <select name="sltProduct" id="sltProduct" required>
+                    <option disabled selected value="">Choose a Product...</option>
+                </select>
+            </div>
+
+            <label>Overall Rating</label>
+            <div class="rdoOverallRating">
+                <label>
+                    <input type="radio" name="rdoOverallRating" id="rdoOverallRating-1" value="1" required>
+                    &star;
+                </label>
+                <label>
+                    <input type="radio" name="rdoOverallRating" id="rdoOverallRating-2" value="2">
+                    &star;&star;
+                </label>
+                <label>
+                    <input type="radio" name="rdoOverallRating" id="rdoOverallRating-3" value="3">
+                    &star;&star;&star;
+                </label>
+                <label>
+                    <input type="radio" name="rdoOverallRating" id="rdoOverallRating-4" value="4">
+                    &star;&star;&star;&star;
+                </label>
+                <label>
+                    <input type="radio" name="rdoOverallRating" id="rdoOverallRating-5" value="5">
+                    &star;&star;&star;&star;&star;
+                </label>
+            </div>
+
+            <label for="txtDateInstallation">Date of Installation</label>
+            <div>
+                <input type="date" name="txtDateInstallation" id="txtDateInstallation" required>
+            </div>
+
+            <label>Which features did you find useful in the product? <span>(Check all that apply)</span></label>
+            <div class="chkFeatures">
+                <div class="divChkFeature-ch">
+                    <input type="checkbox" name="chkFeatures-ch" id="chkFeatures-ch">
+                    <label for="chkFeatures-ch" id="lblFeatures-ch">Check All</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="chkFeatures-du" id="chkFeatures-du">
+                    <label for="chkFeatures-du">Durability</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="chkFeatures-ea" id="chkFeatures-ea">
+                    <label for="chkFeatures-ea">Ease of Use</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="chkFeatures-pe" id="chkFeatures-pe">
+                    <label for="chkFeatures-pe">Performance</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="chkFeatures-de" id="chkFeatures-de">
+                    <label for="chkFeatures-de">Design</label>
+                </div>
+            </div>
+
+            <label for="txtReview">Written Review <span>(optional)</span></label>
+            <div>
+                <textarea name="txtReview" id="txtReview"></textarea>
+            </div>
+
+            <label for="txtName">Your Name <span>(optional)</span></label>
+            <div>
+                <input type="text" name="txtName" id="txtName">
+            </div>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>
+            <span id="currentYear"></span>
+            <span>Gabriel Feippe</span>
+            <span>Uruguay</span>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+@media only screen and (min-width:800px) {
+    main>form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main>form>* {
+        border-top: solid 3px var(--color-gray-light);
+        padding-top: var(--normal-size);
+    }
+
+    main>form>*:nth-child(1),
+    main>form>*:nth-child(2) {
+        border-top: none;
+    }
+
+    main>form>div {
+        margin-bottom: var(--normal-size);
+    }
+
+    main>form input[type="submit"] {
+        grid-column: span 2;
+        max-width: calc(var(--normal-size) * 30);
+        margin-top: 64px;
+    }
+}
