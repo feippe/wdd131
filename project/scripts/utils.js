@@ -47,15 +47,39 @@ function loadDataInFooter() {
 async function putCategoriesInNav() {
     try {
         let result = await getData("https://www.themealdb.com/api/json/v1/1/categories.php");
+        categories = result.categories;
         let nav = qs("nav");
-        result.categories.forEach(category => {
+        categories.forEach(category => {
             let itemNav = dce("a");
+            itemNav.id = `navId${category.idCategory}`;
             itemNav.href = `category.html?id=${category.idCategory}`;
             itemNav.textContent = category.strCategory;
             nav.append(itemNav);
         });
+        markActualPage();
     } catch (error) {
         console.error('Error fetching categories for nav:', error);
+    }
+}
+function getCurrentPage() {
+    const url = window.location.href;
+    const link = document.createElement('a');
+    link.href = url;
+    const pathname = link.pathname;
+    return pathname === '/' ? 'index.html' : pathname.split('/').pop();
+}
+function markActualPage() {
+    const page = getCurrentPage();
+    switch (page) {
+        case "index.html":
+            qs("nav a:nth-child(1)").className = "selected";
+            break;
+        case "category.html":
+            const id = getParam("id");
+            qs(`#navId${id}`).className = "selected";
+            break;
+        default:
+            break;
     }
 }
 function searchFunctions() {
@@ -73,6 +97,8 @@ function search() {
     window.location = `search.html?q=${value}`;
 }
 // END FOR HEADER AND FOOTER
+
+let categories = [];
 
 loadHeader();
 loadFooter();

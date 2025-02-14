@@ -20,14 +20,11 @@ function getCategoryCard(category) {
     let title = dce("h3");
     title.textContent = category.strCategory;
     card.append(title);
-    /*let description = dce("p");
-    description.textContent = category.strCategoryDescription;
-    card.append(description);*/
     return card;
 }
 
 function showCategoriesList(categories) {
-    let content = qs("#plp-categories");
+    let content = qs("#plp");
     let count = 0;
     categories.forEach(category => {
         if (count < 8) {
