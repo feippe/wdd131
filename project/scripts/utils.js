@@ -8,6 +8,35 @@ function qsa(selector, parent = document) {
 function dce(type) {
     return document.createElement(type);
 }
+function getDomainFromUrl(url) {
+    const link = document.createElement('a');
+    link.href = url;
+    return link.hostname;
+}
+function getVideoIdFromUrl(url) {
+    const link = document.createElement('a');
+    link.href = url;
+    const queryString = link.search;
+    const urlParams = new URLSearchParams(queryString);
+    return urlParams.get("v");
+}
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+function setLocalStorage(name, value) {
+    localStorage.setItem(name, JSON.stringify(value));
+}
+function getLocalStorage(name) {
+    let data = localStorage.getItem(name);
+    if (data != undefined) {
+        return JSON.parse(data);
+    }
+    return null;
+}
 //END UTILS
 
 //GET DATA

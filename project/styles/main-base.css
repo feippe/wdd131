@@ -114,7 +114,7 @@ main>h2 {
     margin: var(--normal-size);
 }
 
-#plp {
+.plp {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     justify-content: space-between;
@@ -122,7 +122,7 @@ main>h2 {
     margin: var(--normal-size);
 }
 
-#plp>a {
+.plp>a {
     background-color: var(--color-gray);
     border-radius: var(--small-size);
     text-align: center;
@@ -130,15 +130,16 @@ main>h2 {
     color: var(--color-dark);
     transition: all .2s ease-in-out;
     place-self: center;
+    height: 100%;
 }
 
-#plp>a:hover {
+.plp>a:hover {
     -webkit-box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.55);
     -moz-box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.55);
     box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.55);
 }
 
-#plp>a>img {
+.plp>a>img {
     width: calc(100% - var(--big-size));
     height: auto;
     margin: var(--normal-size);
@@ -146,7 +147,7 @@ main>h2 {
     border-radius: var(--small-size);
 }
 
-#plp>a>h3 {
+.plp>a>h3 {
     margin: var(--small-size);
 }
 

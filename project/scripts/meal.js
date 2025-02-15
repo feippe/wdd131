@@ -6,6 +6,7 @@ async function loadMeal() {
         if (meals != null && meals.length > 0) {
             meals.forEach(m => {
                 let meal = {
+                    id: m.idMeal,
                     name: m.strMeal,
                     area: m.strArea,
                     category: m.strCategory,
@@ -69,21 +70,42 @@ function printMeal(meal) {
     let p = dce("p");
     p.textContent = meal.instructions;
     qs("#pdp-instructions").append(p);
+
+    saveInLastSeen(meal);
 }
 
-function getDomainFromUrl(url) {
-    const link = document.createElement('a');
-    link.href = url;
-    return link.hostname;
+function mealIsInTheList(meal, list) {
+    for (let i = 0; i < list.length; i++) {
+        if (list[i].id == meal.id) {
+            return i;
+        }
+    }
+    return false;
 }
 
-function getVideoIdFromUrl(url) {
-    const link = document.createElement('a');
-    link.href = url;
-    const queryString = link.search;
-    const urlParams = new URLSearchParams(queryString);
-    return urlParams.get("v");
+function moveToStart(list, position) {
+    if (position >= 0 && position < list.length) {
+        const [element] = list.splice(position, 1);
+        list.unshift(element);
+    }
+    return list;
 }
+
+function saveInLastSeen(meal) {
+    let lastSeen = getLocalStorage("lastSeen");
+    if (lastSeen == null) {
+        lastSeen = [];
+    }
+    const isInList = mealIsInTheList(meal, lastSeen);
+    if (isInList == false) {
+        lastSeen.unshift(meal);
+    } else {
+        moveToStart(lastSeen, isInList);
+    }
+    setLocalStorage("lastSeen", lastSeen);
+}
+
+
 
 
 loadMeal();
